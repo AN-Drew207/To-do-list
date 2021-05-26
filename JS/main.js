@@ -1,3 +1,5 @@
+//Funciones
+
 function adder(n) {
     container_tasks.innerHTML =
         `
@@ -37,8 +39,9 @@ function setdeleters(i){
         
 }
 
+//Declaración de variables
+
 let taskslocal = JSON.parse(window.localStorage.getItem('tasks'));
-console.log(taskslocal);
 if(taskslocal!=null){
     var tasks = taskslocal;
 }else{
@@ -51,10 +54,14 @@ const form = document.querySelector('#form-task');
 const container_tasks= document.querySelector('#all-tasks');
 const add_btn = document.querySelector('#add-btn');
 const add_container = document.querySelector('#add-btn-container');
-const delete_btn = document.querySelector('#delete')
+const delete_btn = document.querySelector('#delete');
+const remove_all = document.querySelector('#remove-all');
 var deleters_tasks = [];
 var input_name = document.querySelector('#input_name');
 var input_time = document.querySelector('#input_time');
+
+//Relleno de la página proveniente del Local Storage
+
 for(var i=1; i<cant_tasks+1;i++){
     var auxtask=`task-${i}`;
     container_tasks.innerHTML=
@@ -73,6 +80,9 @@ for(var i=1; i<cant_tasks+1;i++){
     `+container_tasks.innerHTML;
 
 }
+
+//Seteo que los deleters de cada task
+
 for(var i=0;i<cant_tasks;i++){
     setdeleters(i);
 }
@@ -81,6 +91,9 @@ add_btn.addEventListener('click', (e)=>{
     input_name.value="";
     input_time.value="";
 });
+
+//Submit del form de las task
+
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
     if(input_time.value.length!=0 &&input_name.value.length!=0){
@@ -98,7 +111,13 @@ form.addEventListener('submit', (e)=>{
     
 });
 
+//delete del form de las task
+
 delete_btn.addEventListener('click', (e)=>{
     container_form.style.display = "none";
 })
 
+remove_all.addEventListener('click', (e)=>{
+    window.localStorage.clear();
+    container_tasks.innerHTML="";
+})

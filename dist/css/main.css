@@ -25,10 +25,7 @@ body #header {
   background-color: #2356ff;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 80vw 20vw;
-      grid-template-columns: 80vw 20vw;
   width: 100vw;
-  font-size: 25px;
   border-bottom: 1px solid #fff;
 }
 
@@ -43,7 +40,6 @@ body #header h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 15px;
 }
 
 body #header .btn-container {
@@ -61,7 +57,6 @@ body #header .btn-container {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 0px 15px;
 }
 
 body #header .btn-container .btn {
@@ -78,8 +73,6 @@ body #header .btn-container .btn {
   align-items: center;
   border: 1px solid #fff;
   color: #fff;
-  font-size: 25px;
-  padding: 5px;
 }
 
 body #header .btn-container .btn:active {
@@ -116,7 +109,6 @@ body main #form-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10px 0px;
   overflow-x: hidden;
   width: 100vw;
 }
@@ -151,17 +143,13 @@ body main #form-container .time-container {
       -ms-flex-align: center;
           align-items: center;
   height: auto;
-  width: 25%;
-  padding-left: 20px;
 }
 
 body main #form-container .time-container .time {
-  height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  font-size: 20px;
 }
 
 body main #form-container .name {
@@ -175,18 +163,14 @@ body main #form-container .name {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 20px;
   height: auto;
-  width: 65%;
 }
 
 body main #form-container .name .task-name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 20px;
   overflow-x: hidden;
-  height: 40px;
   width: 100%;
 }
 
@@ -205,7 +189,6 @@ body main #form-container .btn-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 10%;
 }
 
 body main #all-tasks {
@@ -246,7 +229,6 @@ body main #all-tasks .task {
       -ms-flex-pack: center;
           justify-content: center;
   height: auto;
-  padding: 10px 0px;
   width: 100%;
 }
 
@@ -262,8 +244,6 @@ body main #all-tasks .task .time-container {
       -ms-flex-align: center;
           align-items: center;
   height: auto;
-  width: 25%;
-  padding-left: 20px;
 }
 
 body main #all-tasks .task .time-container .time {
@@ -273,7 +253,6 @@ body main #all-tasks .task .time-container .time {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  height: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -291,9 +270,7 @@ body main #all-tasks .task .name {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 20px;
   height: auto;
-  width: 65%;
 }
 
 body main #all-tasks .task .name .task-name {
@@ -307,7 +284,6 @@ body main #all-tasks .task .name .task-name {
   display: -ms-flexbox;
   display: flex;
   overflow-x: hidden;
-  height: 2em;
   width: 100%;
 }
 
@@ -326,7 +302,6 @@ body main #all-tasks .task .btn-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 10%;
 }
 
 .btn {
@@ -358,5 +333,192 @@ body main #all-tasks .task .btn-container {
 
 .btn-green:active {
   background-color: #00a500;
+}
+
+@media (min-width: 960px) {
+  #header {
+    -ms-grid-columns: 60vw 40vw;
+        grid-template-columns: 60vw 40vw;
+    font-size: 25px;
+  }
+  #header h1 {
+    padding: 15px;
+  }
+  #header .btn-container {
+    padding: 0px 15px;
+  }
+  #header .btn-container .btn {
+    font-size: 20px;
+    padding: 5px;
+  }
+  main #form-container {
+    padding: 10px 0px;
+  }
+  main #form-container .time-container {
+    padding-left: 20px;
+    width: 25%;
+  }
+  main #form-container .time-container .time {
+    font-size: 25px;
+    height: 40px;
+  }
+  main #form-container .name {
+    padding-left: 20px;
+    width: 65%;
+  }
+  main #form-container .name .task-name {
+    font-size: 25px;
+    height: 40px;
+  }
+  main #form-container .btn-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 15%;
+  }
+  main #all-tasks .task {
+    padding: 10px 0px;
+  }
+  main #all-tasks .task .time-container {
+    padding-left: 20px;
+  }
+  main #all-tasks .task .time-container .time {
+    font-size: 25px;
+    height: 40px;
+  }
+  main #all-tasks .task .name {
+    padding-left: 20px;
+    height: auto;
+  }
+  main #all-tasks .task .name .task-name {
+    font-size: 25px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 960px) {
+  #header {
+    -ms-grid-columns: 50vw 50vw;
+        grid-template-columns: 50vw 50vw;
+  }
+  #header h1 {
+    font-size: 40px;
+  }
+  #header .btn-container .btn {
+    font-size: 20px;
+    padding: 5px;
+  }
+  main #form-container {
+    padding: 5px 5px;
+  }
+  main #form-container .time-container {
+    padding-left: 15px;
+    width: 20%;
+  }
+  main #form-container .time-container .time {
+    height: 30px;
+    font-size: 20px;
+  }
+  main #form-container .name {
+    width: 60%;
+  }
+  main #form-container .name .task-name {
+    font-size: 20px;
+    height: 30px;
+  }
+  main #form-container .btn-container {
+    width: 20%;
+  }
+  main #all-tasks .task .time-container {
+    width: 20%;
+    padding-left: 20px;
+  }
+  main #all-tasks .task .time-container .time {
+    height: 1.5em;
+    width: 100%;
+  }
+  main #all-tasks .task .name {
+    width: 60%;
+  }
+  main #all-tasks .task .name .task-name {
+    height: 1.5em;
+    width: 100%;
+  }
+  main #all-tasks .task .btn-container {
+    width: 20%;
+  }
+}
+
+@media (max-width: 550px) {
+  #header {
+    -ms-grid-columns: 45vw 55vw;
+        grid-template-columns: 45vw 55vw;
+    padding: 5px 0px;
+  }
+  #header h1 {
+    font-size: 25px;
+  }
+  #header .btn-container .btn {
+    font-size: 12px;
+    padding: 5px;
+  }
+  main #form-container .time-container {
+    padding-left: 5px;
+    width: 25%;
+  }
+  main #form-container .time-container .time {
+    height: 20px;
+    font-size: 10px;
+  }
+  main #form-container .name {
+    width: 45%;
+  }
+  main #form-container .name .task-name {
+    font-size: 10px;
+    height: 20px;
+  }
+  main #form-container .btn-container {
+    width: 30%;
+  }
+  main #form-container .btn-container .btn {
+    font-size: 10px;
+  }
+  main #all-tasks .task {
+    padding: 5px;
+  }
+  main #all-tasks .task .time-container {
+    width: 30%;
+    padding-left: 5px;
+  }
+  main #all-tasks .task .time-container .time {
+    font-size: 10px;
+    height: 1rem;
+    width: 100%;
+  }
+  main #all-tasks .task .name {
+    width: 50%;
+  }
+  main #all-tasks .task .name .task-name {
+    font-size: 10px;
+    height: 1rem;
+    width: 100%;
+  }
+  main #all-tasks .task .btn-container {
+    width: 20%;
+  }
+  main #all-tasks .task .btn-container .btn {
+    font-size: 10px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
