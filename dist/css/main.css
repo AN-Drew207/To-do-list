@@ -21,8 +21,211 @@ body {
   color: white;
 }
 
+@media (min-width: 960px) {
+  body #header {
+    -ms-grid-columns: 60vw 40vw;
+        grid-template-columns: 60vw 40vw;
+    font-size: 25px;
+  }
+  body #header h1 {
+    padding: 15px;
+  }
+  body #header .btn-container {
+    padding: 0px 15px;
+  }
+  body #header .btn-container .btn {
+    font-size: 20px;
+    padding: 5px;
+  }
+  body main #form-container {
+    padding: 10px 0px;
+  }
+  body main #form-container .time-container {
+    padding-left: 20px;
+    width: 25%;
+  }
+  body main #form-container .time-container .time {
+    font-size: 25px;
+    height: 40px;
+  }
+  body main #form-container .name {
+    padding-left: 20px;
+    width: 65vw;
+  }
+  body main #form-container .name .task-name {
+    font-size: 25px;
+    height: 40px;
+  }
+  body main #form-container .btn-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 15%;
+  }
+  body main #all-tasks .task {
+    padding: 10px 0px;
+  }
+  body main #all-tasks .task .time-container {
+    padding-left: 20px;
+    width: 25%;
+  }
+  body main #all-tasks .task .time-container .time {
+    font-size: 25px;
+    height: 40px;
+  }
+  body main #all-tasks .task .name {
+    padding-left: 20px;
+    height: auto;
+    width: 65%;
+  }
+  body main #all-tasks .task .name .task-name {
+    font-size: 25px;
+    height: 40px;
+  }
+  body main #all-tasks .task .btn-container {
+    width: 10%;
+  }
+  body main #all-tasks .task .btn-container .btn {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 960px) {
+  body #header {
+    -ms-grid-columns: 50vw 50vw;
+        grid-template-columns: 50vw 50vw;
+  }
+  body #header h1 {
+    font-size: 40px;
+  }
+  body #header .btn-container .btn {
+    font-size: 20px;
+    padding: 5px;
+  }
+  body main #form-container {
+    padding: 5px 5px;
+  }
+  body main #form-container .time-container {
+    padding-left: 15px;
+    width: 20%;
+  }
+  body main #form-container .time-container .time {
+    height: 30px;
+    font-size: 20px;
+  }
+  body main #form-container .name {
+    width: 60%;
+  }
+  body main #form-container .name .task-name {
+    font-size: 20px;
+    height: 30px;
+  }
+  body main #form-container .btn-container {
+    width: 20%;
+  }
+  body main #all-tasks .task {
+    padding: 5px 0px;
+  }
+  body main #all-tasks .task .time-container {
+    width: 25%;
+    padding-left: 20px;
+  }
+  body main #all-tasks .task .time-container .time {
+    height: 1.5em;
+    font-size: 20px;
+    width: 100%;
+  }
+  body main #all-tasks .task .name {
+    width: 50%;
+  }
+  body main #all-tasks .task .name .task-name {
+    height: 1.5em;
+    font-size: 20px;
+    width: 100%;
+  }
+  body main #all-tasks .task .btn-container {
+    width: 20%;
+  }
+}
+
+@media (max-width: 550px) {
+  body #header {
+    -ms-grid-columns: 45vw 55vw;
+        grid-template-columns: 45vw 55vw;
+    padding: 5px 0px;
+  }
+  body #header h1 {
+    font-size: 25px;
+  }
+  body #header .btn-container .btn {
+    font-size: 12px;
+    padding: 5px;
+  }
+  body main #form-container .time-container {
+    padding-left: 5px;
+    width: 25%;
+  }
+  body main #form-container .time-container .time {
+    height: 20px;
+    font-size: 10px;
+  }
+  body main #form-container .name {
+    width: 45%;
+  }
+  body main #form-container .name .task-name {
+    font-size: 10px;
+    height: 20px;
+  }
+  body main #form-container .btn-container {
+    width: 30%;
+  }
+  body main #form-container .btn-container .btn {
+    font-size: 10px;
+  }
+  body main #all-tasks .task {
+    padding: 5px;
+  }
+  body main #all-tasks .task .time-container {
+    width: 30%;
+    padding-left: 5px;
+  }
+  body main #all-tasks .task .time-container .time {
+    font-size: 10px;
+    height: 1rem;
+    width: 100%;
+  }
+  body main #all-tasks .task .name {
+    width: 50%;
+  }
+  body main #all-tasks .task .name .task-name {
+    font-size: 10px;
+    height: 1rem;
+    width: 100%;
+  }
+  body main #all-tasks .task .btn-container {
+    width: 20%;
+  }
+  body main #all-tasks .task .btn-container .btn {
+    font-size: 8.5px;
+  }
+}
+
 body #header {
   background-color: #2356ff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   display: -ms-grid;
   display: grid;
   width: 100vw;
@@ -333,192 +536,5 @@ body main #all-tasks .task .btn-container {
 
 .btn-green:active {
   background-color: #00a500;
-}
-
-@media (min-width: 960px) {
-  #header {
-    -ms-grid-columns: 60vw 40vw;
-        grid-template-columns: 60vw 40vw;
-    font-size: 25px;
-  }
-  #header h1 {
-    padding: 15px;
-  }
-  #header .btn-container {
-    padding: 0px 15px;
-  }
-  #header .btn-container .btn {
-    font-size: 20px;
-    padding: 5px;
-  }
-  main #form-container {
-    padding: 10px 0px;
-  }
-  main #form-container .time-container {
-    padding-left: 20px;
-    width: 25%;
-  }
-  main #form-container .time-container .time {
-    font-size: 25px;
-    height: 40px;
-  }
-  main #form-container .name {
-    padding-left: 20px;
-    width: 65%;
-  }
-  main #form-container .name .task-name {
-    font-size: 25px;
-    height: 40px;
-  }
-  main #form-container .btn-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 15%;
-  }
-  main #all-tasks .task {
-    padding: 10px 0px;
-  }
-  main #all-tasks .task .time-container {
-    padding-left: 20px;
-  }
-  main #all-tasks .task .time-container .time {
-    font-size: 25px;
-    height: 40px;
-  }
-  main #all-tasks .task .name {
-    padding-left: 20px;
-    height: auto;
-  }
-  main #all-tasks .task .name .task-name {
-    font-size: 25px;
-    height: 40px;
-  }
-}
-
-@media (max-width: 960px) {
-  #header {
-    -ms-grid-columns: 50vw 50vw;
-        grid-template-columns: 50vw 50vw;
-  }
-  #header h1 {
-    font-size: 40px;
-  }
-  #header .btn-container .btn {
-    font-size: 20px;
-    padding: 5px;
-  }
-  main #form-container {
-    padding: 5px 5px;
-  }
-  main #form-container .time-container {
-    padding-left: 15px;
-    width: 20%;
-  }
-  main #form-container .time-container .time {
-    height: 30px;
-    font-size: 20px;
-  }
-  main #form-container .name {
-    width: 60%;
-  }
-  main #form-container .name .task-name {
-    font-size: 20px;
-    height: 30px;
-  }
-  main #form-container .btn-container {
-    width: 20%;
-  }
-  main #all-tasks .task .time-container {
-    width: 20%;
-    padding-left: 20px;
-  }
-  main #all-tasks .task .time-container .time {
-    height: 1.5em;
-    width: 100%;
-  }
-  main #all-tasks .task .name {
-    width: 60%;
-  }
-  main #all-tasks .task .name .task-name {
-    height: 1.5em;
-    width: 100%;
-  }
-  main #all-tasks .task .btn-container {
-    width: 20%;
-  }
-}
-
-@media (max-width: 550px) {
-  #header {
-    -ms-grid-columns: 45vw 55vw;
-        grid-template-columns: 45vw 55vw;
-    padding: 5px 0px;
-  }
-  #header h1 {
-    font-size: 25px;
-  }
-  #header .btn-container .btn {
-    font-size: 12px;
-    padding: 5px;
-  }
-  main #form-container .time-container {
-    padding-left: 5px;
-    width: 25%;
-  }
-  main #form-container .time-container .time {
-    height: 20px;
-    font-size: 10px;
-  }
-  main #form-container .name {
-    width: 45%;
-  }
-  main #form-container .name .task-name {
-    font-size: 10px;
-    height: 20px;
-  }
-  main #form-container .btn-container {
-    width: 30%;
-  }
-  main #form-container .btn-container .btn {
-    font-size: 10px;
-  }
-  main #all-tasks .task {
-    padding: 5px;
-  }
-  main #all-tasks .task .time-container {
-    width: 30%;
-    padding-left: 5px;
-  }
-  main #all-tasks .task .time-container .time {
-    font-size: 10px;
-    height: 1rem;
-    width: 100%;
-  }
-  main #all-tasks .task .name {
-    width: 50%;
-  }
-  main #all-tasks .task .name .task-name {
-    font-size: 10px;
-    height: 1rem;
-    width: 100%;
-  }
-  main #all-tasks .task .btn-container {
-    width: 20%;
-  }
-  main #all-tasks .task .btn-container .btn {
-    font-size: 10px;
-  }
 }
 /*# sourceMappingURL=main.css.map */

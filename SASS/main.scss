@@ -8,6 +8,7 @@
 
 body{
     @include flexContent(column);
+    @import 'media-queries';
     overflow-x: hidden;
     color: rgb(255, 255, 255);
     @import 'header';
@@ -18,4 +19,3 @@ body{
     }
 }
 @import 'btn';
-@import 'media-queries';
