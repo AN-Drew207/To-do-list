@@ -96,19 +96,14 @@ add_btn.addEventListener('click', (e)=>{
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
-    if(input_time.value.length!=0 &&input_name.value.length!=0){
-        adder(cant_tasks+1);
-        cant_tasks++;
-        container_form.style.display = "none";
-        console.log(tasks);
-        for(var i=0;i<cant_tasks;i++){
-            setdeleters(i);
-        }
-        setItemLocal(input_name, input_time);
-    }else{
-        window.alert("Fill in all the spaces, please")
+    adder(cant_tasks+1);
+    cant_tasks++;
+    container_form.style.display = "none";
+    console.log(tasks);
+    for(var i=0;i<cant_tasks;i++){
+        setdeleters(i);
     }
-    
+    setItemLocal(input_name, input_time);   
 });
 
 //delete del form de las task
