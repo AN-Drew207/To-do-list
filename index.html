@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <title>To-Do List</title>
+</head>
+<body>
+    <header id="header">
+        <h1 id="title">TO-DO LIST</h1>
+        <div class="btn-container" id="add-btn-container">
+          <button class="btn" id="add-btn">Add task</button>  
+        </div>
+    </header>
+    <main>
+        <section id="form-container">
+            <form id="form-task">
+                <div class="name">
+                    <input id="input_name" type="text" class="task-name" placeholder="Enter task name" maxlength="50" required>
+                </div>
+                <div class="time-container">
+                    <input id="input_time" type="time" class="time" placeholder="Enter time" required> 
+                </div>
+                <div class="btn-container">
+                    <input type="submit" class="btn btn-green" id="ok" value="Ok">
+                    <button class="btn btn-red" id="delete">Delete</button>
+                </div>
+            </form>
+        </section> 
+        <section id="all-tasks">
+        </section>
+    </main>
+</body>
+<script src="JS/main.js"></script>
+</html>

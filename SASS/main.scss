@@ -1,0 +1,169 @@
+@import 'config';
+
+@mixin flexContent ($direction){
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+}
+
+body{
+    @include flexContent(column);
+    overflow-x: hidden;
+    color: rgb(255, 255, 255);
+   
+    #header{ 
+        background-color: rgb(35, 86, 255);
+        display: grid;
+        grid-template-columns: 80vw 20vw;
+        width: 100vw;
+        font-size: 25px;
+        border-bottom: 1px solid #fff;
+        h1{
+            @include flexContent(row); 
+            padding: 15px;
+        }
+        .btn-container{
+            @include flexContent(row);
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0px 15px;
+            .btn{
+                @include flexContent(row);
+                align-items: center;
+                border: 1px solid #fff;
+                color: #fff;
+                font-size: 25px;
+                padding: 5px;
+                &:active{
+                    background-color: rgb(0, 27, 148);
+                    border: 1px solid rgb(73, 73, 73);
+                    color: rgb(73, 73, 73);
+                }
+            }
+        }
+    }
+    main{
+        @include flexContent(column);
+        width: 100vw;
+        #form-container{
+            display: none;
+            align-items: center;
+            flex-direction: row;
+            border-bottom: 1px solid rgb(35, 86, 255);
+            height: auto;
+            justify-content: center;
+            padding: 10px 0px;
+            overflow-x: hidden;
+            width: 100vw;
+                #form-task{
+                @include flexContent(row);
+                align-items: center;
+                justify-content:center;
+                width: 100%;
+                }
+                .time-container{
+                    @include flexContent(row);
+                    height: auto;
+                    width: 25%; 
+                    padding-left:20px;
+                    .time{
+                        height: 40px;
+                        display: flex;
+                        width: 100%;
+                        font-size: 20px;
+                    }
+                }
+                .name{
+                    @include flexContent(row);
+                    padding-left: 20px;
+                    height: auto;
+                    width: 65%;
+                    .task-name{
+                        display: flex;     
+                        font-size: 20px;           
+                        overflow-x: hidden;
+                        height: 40px;
+                        width: 100%;
+                    }
+                }
+                .btn-container{
+                    @include flexContent(row);
+                    align-items: center;
+                    justify-content: center;
+                    width: 10%;
+                }
+                
+            
+            } 
+        #all-tasks{
+            @include flexContent(column);
+            align-items: center;
+            height: auto;
+            justify-content: center;
+            overflow-x: hidden;
+            width: 100vw;
+            .task{
+                @include flexContent(row);
+                align-items: center;
+                border-bottom: 1px solid rgb(35, 86, 255);
+                color: rgb(35, 86, 255);
+                justify-content: center;
+                height: auto;
+                padding: 10px 0px;
+                width: 100%;
+                .time-container{
+                    @include flexContent(row);
+                    height: auto;
+                    width: 25%; 
+                    padding-left:20px;
+                    .time{
+                        align-items: center;
+                        justify-content: flex-start;
+                        height: 2em;
+                        display: flex;
+                        width: 100%;
+                    }
+                }
+                .name{
+                    @include flexContent(row);
+                    padding-left: 20px;
+                    height: auto;
+                    width: 65%;
+                    .task-name{
+                        align-items: center;
+                        justify-content: flex-start;
+                        display: flex;                
+                        overflow-x: hidden;
+                        height: 2em;
+                        width: 100%;
+                    }
+                }
+                .btn-container{
+                    @include flexContent(row);
+                    align-items: center;
+                    justify-content: center;
+                    width: 10%;
+                }   
+            }
+            
+        } 
+    }
+}
+.btn{
+    @include flexContent(row);
+    background-color: transparent;
+    color:rgb(35, 86, 255);
+    border: 1px solid rgb(35, 86, 255);
+    justify-content: center;
+    height:auto;
+    margin: 0px 5px;
+    padding: 5px;
+    width: auto;
+       
+}
+.btn-red:active{
+        background-color: #a50000;
+    } 
+.btn-green:active{
+        background-color: #00a500;
+    } 
