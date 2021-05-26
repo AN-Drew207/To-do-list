@@ -1,0 +1,25 @@
+#header{ 
+    background-color: rgb(35, 86, 255);
+    display: grid;
+    width: 100vw;
+    border-bottom: 1px solid #fff;
+    h1{
+        @include flexContent(row); 
+    }
+    .btn-container{
+        @include flexContent(row);
+        align-items: center;
+        justify-content: flex-end;
+        .btn{
+            @include flexContent(row);
+            align-items: center;
+            border: 1px solid #fff;
+            color: #fff;
+            &:active{
+                background-color: rgb(0, 27, 148);
+                border: 1px solid rgb(73, 73, 73);
+                color: rgb(73, 73, 73);
+            }
+        }
+    }
+}

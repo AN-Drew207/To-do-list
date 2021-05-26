@@ -1,0 +1,82 @@
+#form-container{
+    display: none;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid rgb(35, 86, 255);
+    height: auto;
+    justify-content: center;
+    overflow-x: hidden;
+    width: 100vw;
+        #form-task{
+        @include flexContent(row);
+        align-items: center;
+        justify-content:center;
+        width: 100%;
+        }
+        .time-container{
+            @include flexContent(row);
+            height: auto;
+            .time{
+                display: flex;
+                width: 100%;
+            }
+        }
+        .name{
+            @include flexContent(row);
+            height: auto;
+            .task-name{
+                display: flex;             
+                overflow-x: hidden;
+                width: 100%;
+            }
+        }
+        .btn-container{
+            @include flexContent(row);
+            align-items: center;
+            justify-content: center;
+        }
+    } 
+#all-tasks{
+    @include flexContent(column);
+    align-items: center;
+    height: auto;
+    justify-content: center;
+    overflow-x: hidden;
+    width: 100vw;
+    .task{
+        @include flexContent(row);
+        align-items: center;
+        border-bottom: 1px solid rgb(35, 86, 255);
+        color: rgb(35, 86, 255);
+        justify-content: center;
+        height: auto;
+        width: 100%;
+        .time-container{
+            @include flexContent(row);
+            height: auto;
+            .time{
+                align-items: center;
+                justify-content: flex-start;
+                display: flex;
+                width: 100%;
+            }
+        }
+        .name{
+            @include flexContent(row);
+            height: auto;
+            .task-name{
+                align-items: center;
+                justify-content: flex-start;
+                display: flex;                
+                overflow-x: hidden;
+                width: 100%;
+            }
+        }
+        .btn-container{
+            @include flexContent(row);
+            align-items: center;
+            justify-content: center;
+        }   
+    }
+    
+}
