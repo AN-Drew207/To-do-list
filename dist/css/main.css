@@ -243,6 +243,7 @@ body #header h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 body #header .btn-container {

@@ -7,6 +7,7 @@
     border-bottom: 1px solid #fff;
     h1{
         @include flexContent(row); 
+        font-family: 'Josefin Sans', sans-serif;
     }
     .btn-container{
         @include flexContent(row);
