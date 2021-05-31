@@ -9,12 +9,18 @@
 body{
     @include flexContent(column);
     @import 'media-queries';
+    background-image: url(/img/logo-fontoblanco-blue.png);
+    background-size: 100vw 100vh;
     overflow-x: hidden;
     color: rgb(255, 255, 255);
     @import 'header';
+   
     main{
+        
+        font-family: 'Roboto', sans-serif;
         @include flexContent(column);
         width: 100vw;
+        overflow-y: auto;
         @import 'sections'; 
     }
 }

@@ -17,6 +17,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-image: url(/img/logo-fontoblanco-blue.png);
+  background-size: 100vw 100vh;
   overflow-x: hidden;
   color: white;
 }
@@ -223,13 +225,13 @@ body {
 
 body #header {
   background-color: #2356ff;
+  border-bottom: 1px solid #fff;
+  display: -ms-grid;
+  display: grid;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  display: -ms-grid;
-  display: grid;
   width: 100vw;
-  border-bottom: 1px solid #fff;
 }
 
 body #header h1 {
@@ -286,6 +288,7 @@ body #header .btn-container .btn:active {
 }
 
 body main {
+  font-family: 'Roboto', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,6 +300,7 @@ body main {
       -ms-flex-align: center;
           align-items: center;
   width: 100vw;
+  overflow-y: auto;
 }
 
 body main #form-container {
