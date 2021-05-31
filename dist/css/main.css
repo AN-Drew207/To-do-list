@@ -17,7 +17,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url(/img/logo-fontoblanco-blue.png);
+  background-image: url(../../img/logo-fontoblanco-blue.png);
   background-size: 100vw 100vh;
   overflow-x: hidden;
   color: white;
