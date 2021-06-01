@@ -71,7 +71,8 @@ function setEditers(i){
         editers_tasks[i].addEventListener('click',(e)=>{
             task.style.display="none";
             forms_edit_task[i].style.display="flex";
-
+            input_name_edit.value=new_name.innerText;
+            input_time_edit.value=new_time.innerText;
         });
         forms_edit_task[i].addEventListener('submit',(e)=>{
             e.preventDefault();
