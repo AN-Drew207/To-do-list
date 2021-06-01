@@ -82,7 +82,7 @@ function setEditers(i){
             console.log("paso por aqui");
             setItemLocal(input_name_edit,input_time_edit,i+1);
             container_tasks.innerHTML="";
-            fillPage();
+            fillPageAndSet();
         });
         cancel.addEventListener('click', (e)=>{
             task.style.display="flex";
@@ -92,7 +92,7 @@ function setEditers(i){
         });
 }
 
-function fillPage(){
+function fillPageAndSet(){
     for(var i=1; i<cant_tasks+1;i++){
         var auxtask=`task-${i}`;
         container_tasks.innerHTML=
@@ -124,6 +124,10 @@ function fillPage(){
         `+container_tasks.innerHTML;
     
     }
+    for(var i=0;i<cant_tasks;i++){
+        setdeleters(i);
+        setEditers(i);
+    }
 }
 //Declaración de variables
 
@@ -151,14 +155,10 @@ var input_time = document.querySelector('#input_time');
 
 //Relleno de la página proveniente del Local Storage
 
-fillPage();
+fillPageAndSet();
 
 //Seteo que los deleters de cada task
 
-for(var i=0;i<cant_tasks;i++){
-    setdeleters(i);
-    setEditers(i);
-}
 add_btn.addEventListener('click', (e)=>{
     container_form.style.display = "flex";
     input_name.value="";
