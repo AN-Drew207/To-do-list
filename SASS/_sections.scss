@@ -1,4 +1,4 @@
-#form-container{
+.form-container{
     display: none;
     align-items: center;
     flex-direction: row;
@@ -7,7 +7,7 @@
     justify-content: center;
     overflow-x: hidden;
     width: 100vw;
-        #form-task{
+        .form-task{
         @include flexContent(row);
         align-items: center;
         justify-content:center;

@@ -14,7 +14,7 @@
         }
     }
     main{
-        #form-container{
+        .form-container{
             padding: 10px 0px;
                 .time-container{
                     padding-left:20px;
@@ -44,7 +44,7 @@
                 padding: 10px 0px;
                 .time-container{
                     padding-left:20px;
-                    width: 25%;
+                    width: 20%;
                     .time{
                         font-size: 25px;
                         height: auto;
@@ -60,7 +60,7 @@
                     }
                 }
                 .btn-container{
-                    width: 10%;
+                    width: 15%;
                     .btn{
                         font-size: 20px;
                     }
@@ -85,7 +85,7 @@
         }
     }
     main{
-        #form-container{
+        .form-container{
             padding: 5px 5px;
             .time-container{
                 padding-left:15px;
@@ -148,7 +148,7 @@
         }
     }
     main{
-        #form-container{
+        .form-container{
             .time-container{
                 padding-left: 5px;
                 width: 25%; 
